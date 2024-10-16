@@ -17,6 +17,18 @@ export default {
 		"2xl": "1536px",
 	},
   	extend: {
+		
+		keyframes: {
+			glow: {
+			  '0%': { boxShadow: '0 0 10px 2px rgba(0, 255, 0, 0.7)' },
+			  '100%': { boxShadow: '0 0 20px 4px rgba(0, 255, 0, 1)' },
+			},
+		  },
+		  animation: {
+			glow: 'glow 1s infinite alternate',
+		  },
+
+
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

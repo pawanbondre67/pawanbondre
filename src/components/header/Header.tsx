@@ -12,15 +12,24 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-import React from "react";
+import React, { useRef, useState } from "react";
 // import { useRouter } from 'next/router';
 
 const Header: React.FC = () => {
-  // const router = useRouter();
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
-  // const handleCheckoutWork = () => {
-  //   router.push('/projects');
-  // };
+  const handlePlayPause = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
 
   return (
     <header className="backdrop-blur-md text-white xl:py-2 sticky top-0 flex items-center justify-between px-4 py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 z-50 lg:static">
@@ -97,9 +106,15 @@ const Header: React.FC = () => {
           </DialogContent>
         </Dialog>
 
-        <button className=" border-gray-500 border hover:text-green-600 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(151,126,126,0.16)] to-transparent rounded-md p-1.5  text-xl  shadow hover:shadow-green-600 duration-700">
-          🎵
+        <button
+          onClick={handlePlayPause}
+          className={`border-gray-500 border hover:text-green-600 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(151,126,126,0.16)] to-transparent rounded-md p-1.5 text-xl shadow duration-700 ${
+            isPlaying ? 'animate-glow' : ''
+          }`}>
+          🎵 {isPlaying}
         </button>
+        <audio loop ref={audioRef} src="/src_assets_audio_ghostrifter-purple-dream.ogg" />
+     
       </div>
     </header>
   );
