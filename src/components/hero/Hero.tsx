@@ -7,11 +7,19 @@ import Services from "../Services/Services"
 import Contact  from "../contact/Contact"
 // import Projects from "../Projects/Projects"
 import { useNavigate } from "react-router-dom"
-
+// import {useTypewriter,Cursor} from "react-simple-typewriter"
+import {TypeAnimation} from 'react-type-animation'
 
 function Hero() {
 
   const navigate = useNavigate();
+
+  // const [text] = useTypewriter({
+  //   words: ["Tech Enthusiast", "Full Stack Developer", "Learner","Computer Engineering Student"],
+  //   loop: true,
+  //   typeSpeed: 120,
+  //   deleteSpeed: 80,
+  // });
 
   const handleViewProjects = () => {
     navigate(`/projects`);
@@ -24,10 +32,34 @@ function Hero() {
             Pawan Bondre
         </h1>
 
+          {/* <div className="py-2 font-medium text-xl">
+            I am a {''}
+             <span>{text}</span>
+            <span className="text-white" aria-hidden="true">
+          <Cursor/> </span>
+
+          </div> */}
+
           <div className="py-2 font-medium text-xl">
-            I am a: <span>Tech Enthusiast</span>
-            <span className="typed-cursor typed-cursor--blink" aria-hidden="true">
-            |</span>
+        <span>I am a {''}
+       
+          <TypeAnimation
+          className="font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+          sequence={[
+            "Tech Enthusiast",
+            2000,
+            "Full Stack Developer",
+            2000,
+            "Learner",
+            2000,
+            "Computer Engineering Student",
+            2000,
+          ]}
+          wrapper="span"
+          speed={3}
+          repeat={Infinity}
+        /></span>
+
 
           </div>
 
