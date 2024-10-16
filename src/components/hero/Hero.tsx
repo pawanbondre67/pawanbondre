@@ -11,7 +11,7 @@ function Hero() {
   return (
     <>
     <div className=" text-white  text-center space-y-4">
-    <img alt="Hero" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" className="mt-7 mx-auto aspect-square overflow-hidden rounded-full object-cover" src="/photo.jpg"   />
+    <img alt="Hero" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" className="mt-7 mx-auto aspect-square overflow-hidden rounded-full object-cover" src="/pawanbondre.svg"   />
         <h1 className="text-3xl p-0 font-bold tracking-tight sm:text-4xl md:text-5xl">
             Pawan Bondre
         </h1>
