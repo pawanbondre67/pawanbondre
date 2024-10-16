@@ -34,7 +34,7 @@ const Header: React.FC = () => {
   return (
     <header className="backdrop-blur-md text-white xl:py-2 sticky top-0 flex items-center justify-between px-4 py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 z-50 lg:static">
       <a className="flex items-center gap-2" href="/">
-        <span className="text-lg font-bold text-white">PB</span>
+        <span className="text-xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">PB</span>
       </a>
 
       <div className="flex gap-3">
