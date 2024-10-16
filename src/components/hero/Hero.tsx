@@ -5,9 +5,17 @@ import Education from "../Education/Education"
 import Services from "../Services/Services"
 
 import Contact  from "../contact/Contact"
+// import Projects from "../Projects/Projects"
+import { useNavigate } from "react-router-dom"
 
 
 function Hero() {
+
+  const navigate = useNavigate();
+
+  const handleViewProjects = () => {
+    navigate(`/projects`);
+  };
   return (
     <>
     <div className=" text-white  text-center space-y-4">
@@ -27,11 +35,17 @@ function Hero() {
                 </p>
 
 
-                <div  className="text-black mt-4" >
+                <div className="flex justify-center gap-8">
+                  <div  className="text-black mt-4" >
                     <a href="#contact">
                     <Button variant="outline">Let's Connect</Button>
                       </a>
                  </div>
+                 <div  className="text-black mt-4" >
+                  
+                    <Button variant="outline" onClick={handleViewProjects} >My Work</Button>
+                     
+                 </div></div>
 
 
 </div>
@@ -41,6 +55,7 @@ function Hero() {
 <Education/>
 <Services/>
 <Contact/>
+
 </>
   )
 }
