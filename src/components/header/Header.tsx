@@ -9,18 +9,21 @@ function Header() {
 
   return (
     <header className="text-white xl:py-2 sticky top-0 flex items-center justify-between px-4 py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 z-50 lg:static">
-      <a className="flex items-center gap-2" href="/pawanb19">
+      <a className="flex items-center gap-2" href="/">
         <span className="text-lg font-bold">PB</span>
       </a>
       <nav className="hidden lg:flex items-center gap-6">
-        <a className="text-sm font-medium hover:underline" href="#intro">Intro</a>
-        <a className="text-sm font-medium hover:underline" href="#experience">Experience</a>
-        <a className="text-sm font-medium hover:underline" href="#skills">Skills</a>
-        <a className="text-sm font-medium hover:underline" href="#projects">Projects</a>
-        <a className="text-sm font-medium hover:underline" href="#education">Education</a>
-        <a className="text-sm font-medium hover:underline" href="#services">Services</a>
-        <a className="text-sm font-medium hover:underline" href="#contact">Contact</a>
+        <a className="text-sm font-medium hover:underline" href="/#intro">Intro</a>
+        <a className="text-sm font-medium hover:underline" href="/#experience">Experience</a>
+        <a className="text-sm font-medium hover:underline" href="/#skills">Skills</a>
+        <a className="text-sm font-medium hover:underline" href="/#projects">Projects</a>
+        <a className="text-sm font-medium hover:underline" href="/#education">Education</a>
+        <a className="text-sm font-medium hover:underline" href="/#services">Services</a>
+        <a className="text-sm font-medium hover:underline" href="/#contact">Contact</a>
       </nav>
+
+
+
       <button
         className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-transparent shadow-sm hover:bg-accent hover:text-accent-foreground h-9 w-9 lg:hidden"
         type="button"
