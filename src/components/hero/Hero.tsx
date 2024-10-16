@@ -7,25 +7,11 @@ import Services from "../Services/Services"
 import Contact  from "../contact/Contact"
 // import Projects from "../Projects/Projects"
 import { useNavigate } from "react-router-dom"
-import {  Cursor, useTypewriter } from 'react-simple-typewriter'
+
 
 function Hero() {
 
   const navigate = useNavigate();
-const [text] = useTypewriter({
-    words: [
-      'Frontend Developer',
-      'Tech Enthusiast',
-      'Full Stack Developer',
-      'learner',
-      'Computer Science Student',
-    ],
-    loop: true,
-    typeSpeed: 120,
-    deleteSpeed: 80,
-
-  });
-  
 
   const handleViewProjects = () => {
     navigate(`/projects`);
@@ -38,13 +24,20 @@ const [text] = useTypewriter({
             Pawan Bondre
         </h1>
 
-        <div className="py-2 font-medium text-xl">
-  <span>
-    I am a{' '}
-    <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">{text}</span>
-    <span><Cursor/></span>
-  </span>
-</div>
+          {/* <div className="py-2 font-medium text-xl">
+            I am a {''}
+             <span>{text}</span>
+            <span className="text-white" aria-hidden="true">
+          <Cursor/> </span>
+
+          </div> */}
+
+          <div className="py-2 font-medium text-xl">
+            I am a: <span>Tech Enthusiast</span>
+            <span className="typed-cursor typed-cursor--blink" aria-hidden="true">
+            |</span>
+
+          </div>
 
             <p className=" text-base text-gray-400 px-5 lg:max-w-screen-lg lg:mx-auto">I am a dedicated Computer Engineering student with a strong focus on frontend development. Experienced in creating dynamic user interfaces using <span className="font-bold text-white"> React </span>, I have successfully led teams in Agile environments and integrated complex UI features with backend APIs. My academic projects showcase my proficiency in <span className="font-bold text-white">full-stack development </span> and secure authentication practices. I am eager to leverage my skills in real-world scenarios through internships and entry-level positions.
                 </p>
