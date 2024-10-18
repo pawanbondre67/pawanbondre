@@ -15,7 +15,7 @@ const ProjectDetails: React.FC = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold text-gray-50">{project.title}</h2><span className='text-red-500' >({project.status})</span>
+      <h2 className="text-2xl font-bold text-gray-50">{project.title}</h2><span className='text-red-500' >{project.status}</span>
       <img
         alt="Project Image"
         loading="lazy"
@@ -47,7 +47,7 @@ const ProjectDetails: React.FC = () => {
                    <Button variant="outline" className=" flex gap-2 mt-2 hover:text-white bg-clip-text text-transparent"> Live Project  <FaArrowRight className='text-white' /></Button>
         </a>
 
-        <a href={project.projectLink}
+        <a href={project.githubLink}
            target='_blank'
            
            >

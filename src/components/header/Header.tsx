@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dialog";
 
 import React, { useRef, useState } from "react";
-// import { useRouter } from 'next/router';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -33,9 +33,9 @@ const Header: React.FC = () => {
 
   return (
     <header className="backdrop-blur-md text-white xl:py-2 sticky top-0 flex items-center justify-between px-4 py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 z-50 lg:static">
-      <a className="flex items-center gap-2" href="/">
+      <Link to="/" className="flex items-center gap-2">
         <span className="text-xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">PB</span>
-      </a>
+      </Link>
 
       <div className="flex gap-3">
         <Dialog>
@@ -55,13 +55,15 @@ const Header: React.FC = () => {
                 <div className="font-bold text-white">Actions</div>
 
                 <div className="hover:bg-violet-200 hover:text-black w-full rounded-md">
-                  <a href="/projects">
+               
                     
-                    <button className=" flex  items-center gap-2 text-gray-500 hover:bg-violet-200 hover:text-black w-full rounded-md p-2">
+                <Link to="/projects" >  
+                  <button className=" flex  items-center gap-2 text-gray-500 hover:bg-violet-200 hover:text-black w-full rounded-md p-2">
                       <FaArrowRight />
-                      Checkout my work
-                    </button>
-                  </a>
+                        Checkout my work
+                  </button>
+                 </Link>
+                
                 </div>
 
                <div className=" text-gray-500 hover:bg-violet-200 hover:text-black w-full rounded-md p-2">

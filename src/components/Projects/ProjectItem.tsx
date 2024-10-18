@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 interface Project {
   id: number;
@@ -12,11 +12,11 @@ interface Project {
 }
 
 const ProjectItem: React.FC<Project> = ({ id, title, description, imageUrl, tags }) => {
-  const navigate = useNavigate();
+  
 
-  const handleViewProject = () => {
-    navigate(`/projects/${id}`);
-  };
+
+    
+  
 
   return (
     <div className="bg-card text-card-foreground rounded-lg overflow-hidden bg-gray-950 shadow-lg border-gray-800 border">
@@ -46,9 +46,9 @@ const ProjectItem: React.FC<Project> = ({ id, title, description, imageUrl, tags
           ))}
         </div>
         <div>
-          <button
+         <Link to={`/projects/${id}`}>
+         <button
             className="inline-flex text-gray-200 items-center font-medium mt-4 hover:underline cursor-pointer"
-            onClick={handleViewProject}
           >
             View project
             <svg
@@ -67,6 +67,7 @@ const ProjectItem: React.FC<Project> = ({ id, title, description, imageUrl, tags
               <path d="m12 5 7 7-7 7"></path>
             </svg>
           </button>
+         </Link>
         </div>
       </div>
     </div>
