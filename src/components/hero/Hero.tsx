@@ -2,7 +2,7 @@ import Experience from "../Experience/Experience"
 import Skills from "../Skills/Skills"
 import { Button } from "../ui/button"
 import Education from "../Education/Education"
-import Services from "../Services/Services"
+// import Services from "../Services/Services"
 
 import Contact  from "../contact/Contact"
 // import Projects from "../Projects/Projects"
@@ -68,7 +68,7 @@ const [text] = useTypewriter({
 <Experience/>
 <Skills/>
 <Education/>
-<Services/>
+{/* <Services/> */}
 <Contact/>
 
 </>
