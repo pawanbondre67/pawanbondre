@@ -14,7 +14,7 @@ const Education: React.FC = () => {
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div className="rounded-xl bg-card text-card-foreground w-full border bg-gray-950 dark:border-gray-800 styles_borderColor__A7_2y styles_bgPrimary__rsRCo">
+                        <div className="rounded-xl bg-card  w-full border bg-gray-950 dark:border-gray-800 ">
                             <div className="p-4">
                                 <div className="flex items-center gap-3">
                                     <div className="w-12 h-12 flex-shrink-0">

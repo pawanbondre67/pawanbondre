@@ -34,8 +34,20 @@ const ProjectList: Project[] = [
       additionalDetails: 'An educational platform for students preparing for placements, allowing for efficient note-sharing and management. Developed with Angular, TypeScript, Node.js, Express, and MySQL, it features real-time collaboration, secure JWT authentication, and an easy-to-use interface for organizing study materials. The app aims to enhance study efficiency and user engagement through interactive features.'
 
     },
+    
     {
-        id: 3,
+      id: 3,
+    title: 'DigitalKissan App',
+    description: ' A PWA designed to assist farmers with intelligent crop seed prediction and ...',
+    imageUrl: '/pawanbondre.svg',
+    tags: ['React', 'Firebase', 'TailwindCSS', 'Python', 'Machine Learning'],
+    projectLink: 'https://digitalkissan16.vercel.app/',
+    githubLink : "https://github.com/pawanbondre67/digitalkissan__",
+    status: 'Ongoing',
+    additionalDetails : ' A Web App designed to assist farmers with intelligent crop seed prediction and product purchasing. Built using React, TypeScript, Tailwind CSS, and Firebase, the app employs machine learning algorithms for crop recommendations. It enables farmers to make data-driven decisions and improve agricultural productivity, with a user-friendly interface and real-time data integration.'
+    },
+    {
+        id: 4,
       title: 'Portfoilo Website',
       description: "A comprehensive portfolio showcasing Pawan's expertise as a full stack software engineer ...",
       imageUrl: '/pawanbondre.svg',
@@ -44,17 +56,6 @@ const ProjectList: Project[] = [
       githubLink : 'https://github.com/pawanbondre67/pawanbondre',
       additionalDetails: "A comprehensive portfolio showcasing Pawan's expertise as a full stack software engineer, specializing in web and PWA development. The portfolio highlights a range of projects, from e-commerce and AI-driven apps to educational platforms and agriculture-based solutions. Built using modern web technologies like Angular, React, Node.js, and Firebase, the portfolio reflects Pawan's proficiency in creating responsive, secure, and user-centric applications. It also emphasizes Pawan's commitment to delivering intelligent digital solutions that blend human and AI capabilities to create exceptional user experiences. The portfolio serves as a testament to Pawan's dedication to continuous learning, teamwork, and innovative problem-solving in real-world projects."
 
-    },
-    {
-      id: 4,
-    title: 'DigitalKissan App',
-    description: ' A PWA designed to assist farmers with intelligent crop seed prediction and ...',
-    imageUrl: '/pawanbondre.svg',
-    tags: ['React', 'Redux', 'Firebase', 'TailwindCSS', 'Python', 'Machine Learning'],
-    projectLink: '',
-    githubLink : "",
-    status: 'Ongoing',
-    additionalDetails : ' A PWA designed to assist farmers with intelligent crop seed prediction and product purchasing. Built using React, TypeScript, Tailwind CSS, and Firebase, the app employs machine learning algorithms for crop recommendations. It enables farmers to make data-driven decisions and improve agricultural productivity, with a user-friendly interface and real-time data integration.'
     }
 
 ];

@@ -43,7 +43,7 @@ const Contact : React.FC = () => {
          <a target="_blank" className="text-[#0077B5] hover:bg-[#0077B5] bg-background  bg-gray-950 dark:text-gray-50 rounded-full p-2 hover:text-background transition-colors" data-state="closed" href="https://linkedin.com/in/pawan-bondre-6262b1243">
          
          <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-         <span className="sr-only">LinkedIn</span>0
+         <span className="sr-only">LinkedIn</span>
          </a>
          
          <a target="_blank" className="text-[#1DA1F2] hover:bg-[#1DA1F2] bg-background bg-gray-950 dark:text-gray-50 rounded-full p-2 hover:text-background transition-colors" data-state="closed" href="https://twitter.com/pawancodes">
