@@ -9,6 +9,10 @@ import Contact  from "../contact/Contact"
 import { useNavigate } from "react-router-dom"
 import {  Cursor, useTypewriter } from 'react-simple-typewriter'
 
+// import { Boxes } from "../ui/background-boxes";
+// import { cn } from "@/lib/utils";
+
+import { BackgroundBeams } from "../ui/background-beam";
 function Hero() {
 
   const navigate = useNavigate();
@@ -32,7 +36,11 @@ const [text] = useTypewriter({
   };
   return (
     <>
-    <div className=" text-white  text-center space-y-4">
+    
+
+<div className="py-6 w-full rounded-md  relative flex flex-col items-center justify-center antialiased">
+<BackgroundBeams />
+    <div className=" text-white  text-center space-y-4  z-20">
     <img alt="Hero" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" className="mt-7 mx-auto aspect-square overflow-hidden rounded-full object-cover" src="/pawanbondre.svg"   />
         <h1 className="text-3xl p-0 font-bold tracking-tight sm:text-4xl md:text-5xl">
             Pawan Bondre
@@ -46,7 +54,7 @@ const [text] = useTypewriter({
   </span>
 </div>
 
-            <p className=" text-base text-gray-400 px-5 lg:max-w-screen-lg lg:mx-auto">I am a dedicated Computer Engineering student with a strong focus on frontend development. Experienced in creating dynamic user interfaces using <span className="font-bold text-white"> React </span>, I have successfully led teams in Agile environments and integrated complex UI features with backend APIs. My academic projects showcase my proficiency in <span className="font-bold text-white">full-stack development </span> and secure authentication practices. I am eager to leverage my skills in real-world scenarios through internships and entry-level positions.
+            <p className=" text-base text-gray-600 px-5 lg:max-w-screen-lg lg:mx-auto">I am a dedicated Computer Engineering student with a strong focus on frontend development. Experienced in creating dynamic user interfaces using <span className="font-semibold text-white"> React </span>, I have successfully led teams in Agile environments and integrated complex UI features with backend APIs. My academic projects showcase my proficiency in <span className="font-semibold text-white">full-stack development </span> and secure authentication practices. I am eager to leverage my skills in real-world scenarios through internships and entry-level positions.
                 </p>
 
 
@@ -63,6 +71,7 @@ const [text] = useTypewriter({
                  </div></div>
 
 
+</div>
 </div>
 
 <Experience/>
