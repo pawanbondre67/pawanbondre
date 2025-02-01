@@ -15,11 +15,11 @@ export interface Project {
 const ProjectList: Project[] = [
         {
           id: 1,
-        title: 'traveltrail',
+        title: 'gofarwithme',
         description: 'A personalized travel itinerary planner web application using React ...',
         imageUrl: '/pawanbondre.svg',
         tags: ['React', 'Firebase', 'TypeScript', 'TailwindCSS', 'Gemini AI', 'Authentication'],
-        projectLink: 'https://traveltrail19.netlify.app',
+        projectLink: 'https://gofarwithme.netlify.app',
         githubLink : 'https://github.com/pawanbondre67/ai-based-travel-planner',
         additionalDetails: 'A personalized travel itinerary planner web application using React, Gemini AI, and Firebase. It allows users to create, categorize, and search detailed travel plans with destinations, activities, dates, and photos. The app leverages AI for trip recommendations and Firebase for backend services, providing a secure, user-specific experience.'
       },
