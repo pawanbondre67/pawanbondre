@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa6";
 import { IoDocumentText } from "react-icons/io5";
 import { CiTwitter } from "react-icons/ci";
 import { MdOutlineMail } from "react-icons/md";
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import {
   Dialog,
   DialogContent,
