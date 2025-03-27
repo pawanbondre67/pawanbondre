@@ -8,7 +8,7 @@ import Contact from "../contact/Contact";
 // import Projects from "../Projects/Projects"
 import { useNavigate } from "react-router-dom";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-
+import { motion } from "framer-motion";
 // import { Boxes } from "../ui/background-boxes";
 // import { cn } from "@/lib/utils";
 
@@ -48,56 +48,80 @@ function Hero() {
             className="mt-7 mx-auto aspect-square overflow-hidden rounded-full object-cover"
             src="/pawanbondre.svg"
           />
-          <h1 className="text-3xl p-0 font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Pawan Bondre
-          </h1>
-
-          <div className="py-2 font-medium text-xl">
-            <span>
-              I am a{" "}
-              <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                {text}
-              </span>
-              <span>
-                <Cursor />
-              </span>
-            </span>
-          </div>
-
-
-          <p className=" text-base text-gray-600 px-5 lg:max-w-screen-lg lg:mx-auto">
-            I am a dedicated Computer Engineering student with a strong passion
-            for  <span className="font-semibold text-white">frontend and mobile development </span>. Proficient in React and React
-            Native, I specialize in building dynamic user interfaces and
-            seamless user experiences. My experience as a  <span className="font-semibold text-white">React Native Developer </span> 
-             has enhanced my expertise in mobile app development, while my
-            academic projects showcase my proficiency in full-stack development
-            using the  <span className="font-semibold text-white">MERN stack </span>  and secure authentication practices. I am eager
-            to innovate, learn, and build cutting-edge digital experiences that
-            make an impact. Let’s create something amazing together! 🚀
-          </p>
-
-          <div className="flex justify-center gap-8">
-            <div className="text-black mt-4">
-              <a href="#contact">
-                <Button
-                  variant="outline"
-                  className="hover:text-white bg-clip-text text-transparent"
-                >
-                  Let's Connect
-                </Button>
-              </a>
-            </div>
-            <div className="text-black mt-4">
-              <Button
-                variant="outline"
-                onClick={handleViewProjects}
-                className="hover:text-white bg-clip-text text-transparent"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-3xl p-0 font-bold tracking-tight sm:text-4xl md:text-5xl">
+              <motion.span
+                className="text-white block mb-2"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.8 }}
               >
-                My Work
-              </Button>
+                Pawan Bondre
+              </motion.span>
+            </h1>
+
+            <div className="py-2 font-medium text-xl">
+              <span>
+                I am a{" "}
+                <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  {text}
+                </span>
+                <span>
+                  <Cursor />
+                </span>
+              </span>
             </div>
-          </div>
+
+            <motion.p
+              className="mt-6  text-muted-foreground text-base text-gray-600 px-5 lg:max-w-screen-lg lg:mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              I am a Computer Engineering student passionate about{" "}
+              <span className="font-semibold text-white">
+                frontend and mobile development
+              </span>
+              . Skilled in React, React Native, and the{" "}
+              <span className="font-semibold text-white">MERN stack</span>, I build
+              dynamic user interfaces and seamless experiences. Let’s create something
+              amazing! 🚀
+            </motion.p>
+
+            <motion.div
+              className="mt-10 mb-6 flex flex-col sm:flex-row gap-4 justify-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+            >
+              <div className="flex justify-center gap-8">
+                <div className="text-black mt-4">
+                  <a href="#contact">
+                    <Button
+                      variant="outline"
+                      className="hover:text-white bg-clip-text text-transparent hover:shadow-lg hover:shadow-green-400"
+                    >
+                      Let's Connect
+                    </Button>
+                  </a>
+                </div>
+                <div className="text-black mt-4">
+                  <Button
+                    variant="outline"
+                    onClick={handleViewProjects}
+                    className="hover:text-white bg-clip-text hover:bg-slate-100 text-transparent hover:shadow-lg hover:shadow-blue-400"
+                  >
+                    My Work
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 

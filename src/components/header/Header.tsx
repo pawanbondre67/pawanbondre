@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa6";
 import { IoDocumentText } from "react-icons/io5";
 import { CiTwitter } from "react-icons/ci";
 import { MdOutlineMail } from "react-icons/md";
+import { motion, AnimatePresence } from "framer-motion"
 import {
   Dialog,
   DialogContent,
@@ -33,16 +34,35 @@ const Header: React.FC = () => {
 
   return (
     <header className="backdrop-blur-md text-white xl:py-2 sticky top-0 flex items-center justify-between px-4 py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 z-50 lg:static">
+     <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center"
+          >
+            
       <Link to="/" className="flex items-center gap-2">
         <span className="text-xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">PB</span>
       </Link>
 
+
+      </motion.div>
+
       <div className="flex gap-3">
+
         <Dialog>
           <DialogTrigger asChild>
+          <motion.div
+              
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5}}
+              >
             <button className="text-white  border-gray-500 border hover:text-green-600 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(151,126,126,0.16)] to-transparent rounded-md  text-xl lg:text-2xl p-1.5 md:p-1 shadow hover:shadow-green-600 duration-700">
               ☸️
             </button>
+
+            </motion.div>
           </DialogTrigger>
           <DialogContent className="w-80 rounded-md lg:w-full bg-primary shadow-lg border-gray-800 border ">
             <DialogHeader>
@@ -108,6 +128,12 @@ const Header: React.FC = () => {
           </DialogContent>
         </Dialog>
 
+        <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center space-x-4"
+          >
         <button
           onClick={handlePlayPause}
           className={`border-gray-500 border hover:text-green-600 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(151,126,126,0.16)] to-transparent rounded-md p-1.5 text-xl shadow duration-700 ${
@@ -115,6 +141,8 @@ const Header: React.FC = () => {
           }`}>
           🎵 {isPlaying}
         </button>
+
+        </motion.div>
         <audio loop ref={audioRef} src="/src_assets_audio_ghostrifter-purple-dream.ogg" />
      
       </div>
