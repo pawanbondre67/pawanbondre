@@ -45,7 +45,7 @@ function Hero() {
             height="200"
             decoding="async"
             data-nimg="1"
-            className="mt-7 mx-auto aspect-square overflow-hidden rounded-full object-cover"
+            className="mt-3 mx-auto aspect-square overflow-hidden rounded-full object-cover"
             src="/pawanbondre.svg"
           />
           <motion.div
@@ -78,7 +78,7 @@ function Hero() {
             </div>
 
             <motion.p
-              className="mt-6  text-muted-foreground text-base text-gray-600 px-5 lg:max-w-screen-lg lg:mx-auto"
+              className="mt-6  text-base text-gray-400 px-5 lg:max-w-screen-lg lg:mx-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
