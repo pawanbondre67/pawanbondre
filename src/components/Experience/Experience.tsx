@@ -6,7 +6,7 @@ const Experience: React.FC = () => {
     return (
         <section id="experience" className="space-y-8 w-full md:py-8 lg:py-8 py-6 px-6 md:px-8 lg:px-10">
         <div className=" text-white">
-            <h2 className="text-2xl font-bold text-gray-50 styles_heading__nCucM">Experience</h2>
+            <h2 className="text-2xl font-bold text-gray-50 ">Experience</h2>
             <p className="text-gray-400 ">Professional experience and past roles.</p>
             <div className="rounded-lg border mt-4 text-white p-6 bg-gray-950 dark:border-gray-800">
                 <div className="flex gap-4">
