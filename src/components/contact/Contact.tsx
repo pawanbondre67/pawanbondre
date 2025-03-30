@@ -68,7 +68,11 @@ const Contact: React.FC = () => {
       }
     } catch (error) {
       console.log("Error:", error);
-      toast("An error occurred: " + error.message);
+      if (error instanceof Error) {
+        toast("An error occurred: " + error.message);
+      } else {
+        toast("An unknown error occurred.");
+      }
     } finally {
       setIsLoading(false);
     }
