@@ -103,7 +103,7 @@ export function BlogList() {
     }
   };
 
-  const handleAuthSuccess = (token: string, user: any) => {
+  const handleAuthSuccess = () => {
     setIsAuthenticated(true);
     setShowAuth(false);
   };

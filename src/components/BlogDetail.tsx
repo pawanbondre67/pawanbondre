@@ -41,7 +41,7 @@ export function BlogDetail({ blog, onLike }: BlogDetailProps) {
     }
   };
 
-  const handleAuthSuccess = (token: string, user: any) => {
+  const handleAuthSuccess = () => {
     setShowAuth(false);
   };
 
