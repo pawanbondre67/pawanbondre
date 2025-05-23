@@ -14,11 +14,13 @@ import {
 } from "@/components/ui/dialog";
 
 import React, { useRef, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const Header: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const navigate = useNavigate();
 
   const handlePlayPause = () => {
     if (audioRef.current) {
@@ -29,6 +31,10 @@ const Header: React.FC = () => {
       }
       setIsPlaying(!isPlaying);
     }
+  };
+
+  const handleViewBlogs = () => {
+    navigate(`/blogs`);
   };
 
 
@@ -49,6 +55,20 @@ const Header: React.FC = () => {
       </motion.div>
 
       <div className="flex gap-3">
+
+      <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center space-x-4"
+          >
+        <button
+          onClick={handleViewBlogs}
+          className="border-gray-500 border hover:text-green-600 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(151,126,126,0.16)] to-transparent rounded-md p-1.5 text-xl shadow duration-700">
+        blogs
+        </button>
+
+        </motion.div>
 
         <Dialog>
           <DialogTrigger asChild>

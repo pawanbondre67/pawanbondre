@@ -2,7 +2,7 @@
 import { Button } from "../ui/button";
 
 
-import Contact from "../contact/Contact";
+import Contact from "../extras/contact/Contact";
 // import Projects from "../Projects/Projects"
 import { useNavigate } from "react-router-dom";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
@@ -117,7 +117,7 @@ function Hero() {
                     onClick={handleViewProjects}
                     className="hover:text-white bg-clip-text hover:bg-slate-100 text-transparent hover:shadow-lg hover:shadow-blue-400"
                   >
-                    My Work
+                 Explore my work 😁
                   </Button>
                 </div>
               </div>
