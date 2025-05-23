@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Heart, Eye, Clock, User, ArrowLeft, Filter, ChevronDown } from "lucide-react";
+import { Heart, Eye, ArrowLeft, Filter, ChevronDown } from "lucide-react";
 import { blogApi, CategoryApi } from '@/services/api';
 import { motion } from 'framer-motion';
 import { BlogDetail } from './BlogDetail';
